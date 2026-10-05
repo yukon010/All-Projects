@@ -1,0 +1,158 @@
+//*************************************************************************************************************
+//*Практическая работа 8                                                                                     *
+//*Выполнил: Костюченков В.С.,группа 2ИСПд                                                                    *
+//*Задание: составить программу работы алгоритма *
+//*************************************************************************************************************
+//*****
+
+
+
+
+using System;
+using System.Net;
+namespace работа_8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            bool err1 = true;
+            while (err1)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Clear();
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.WriteLine("Практическая работа 8 \n");
+                Console.WriteLine("Здраствуйте! \n");
+                uint m = 0, a, storage = 0, numcar = 1; // storage - кол-во коробок на складе,m - нужное кол-во коробок, limitcar - лимит ящиков для 1 машины
+                Console.WriteLine("Склад неОЗОН \n");
+                bool err = true;
+
+
+                while (err)
+                {
+                    try
+                    {
+                        err = false;
+                        Console.Write("Введите нужное количество коробок = ");
+                        m = Convert.ToUInt32(Console.ReadLine());
+                        Console.WriteLine("Введите количество коробок на складе всего: \n");
+                        Console.Write("склад = ");
+                        storage = Convert.ToUInt32(Console.ReadLine());
+                    }
+                    catch (FormatException fex) // недопустимый формат ввода
+                    {
+                        err = true;
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Что то пошло не так. {fex.Message}");
+                        Console.BackgroundColor = ConsoleColor.Green;
+                    }
+                    catch (OverflowException oex) // превышен диапозон возможных чисел (число слишком большое/маленькое)
+                    {
+                        err = true;
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Что то пошло не так. {oex.Message}");
+                        Console.BackgroundColor = ConsoleColor.Green;
+                    }
+                    catch (Exception ex) //общее исключение
+                    {
+                        err = true;
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine($"Что то пошло не так. {ex.Message}");
+                        Console.BackgroundColor = ConsoleColor.Green;
+                    }
+
+                    if (m > storage)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.WriteLine("На складе меньше коробок чем нужно. Ошибка.");
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        uint remaining = m; // remaining - остаток
+                        while (remaining > 0)
+
+                        {
+                            try
+                            {
+
+                                Console.WriteLine($"\n--- Машина номер: {numcar} ---");
+                                Console.WriteLine($"Осталось погрузить: {remaining} ");
+                                Console.WriteLine($"Сколько коробок погрузить в машину {numcar} ");
+                                uint loaded = Convert.ToUInt32(Console.ReadLine()); //loaded - загрузка в машину
+                                if (loaded <= 0 || loaded > remaining)
+                                {
+                                    Console.BackgroundColor = ConsoleColor.Red;
+                                    Console.WriteLine($"Ошибка. Введите число от 1 до {remaining}");
+                                    Console.BackgroundColor = ConsoleColor.Green;
+                                    continue;
+                                }
+                                remaining -= loaded;
+                                storage -= loaded;
+                                a = storage;
+
+                                Console.WriteLine($"На складе сейчас {a} коробок. Погрузка...");
+                                Console.WriteLine($"Погрузка {loaded} коробок в машину {numcar} прошла успешно.");
+                                numcar++;
+                            }
+                            catch (FormatException fex) // недопустимый формат ввода
+                            {
+
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.WriteLine($"Что то пошло не так. {fex.Message}");
+                                Console.BackgroundColor = ConsoleColor.Green;
+                            }
+                            catch (OverflowException oex) // превышен диапозон возможных чисел (число слишком большое/маленькое)
+                            {
+
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.WriteLine($"Что то пошло не так. {oex.Message}");
+                                Console.BackgroundColor = ConsoleColor.Green;
+                            }
+                            catch (Exception ex) //общее исключение
+                            {
+
+                                Console.BackgroundColor = ConsoleColor.Red;
+                                Console.WriteLine($"Что то пошло не так. {ex.Message}");
+                                Console.BackgroundColor = ConsoleColor.Green;
+                            }
+                                bool yesOrNo = false;
+                                while (!yesOrNo)
+                                {
+                                    Console.WriteLine($"Все {m} коробки погружены");
+                                    Console.Write("Хотите подолжить? (yes/no):  ");
+                                    string select_key = Console.ReadLine();
+                                    switch (select_key)
+                                    {
+                                        case "yes":
+                                            yesOrNo = true;
+                                            err1 = true;
+
+                                            Console.WriteLine("Все заново...");
+                                            break;
+                                        case "no":
+                                            yesOrNo = true;
+                                            err1 = false;
+                                            Console.WriteLine("Конец.Удачи :>");
+                                            break;
+                                        default:
+
+                                            Console.BackgroundColor = ConsoleColor.Red;
+                                            Console.WriteLine($"Ошибка. Введите yes или no.");
+                                            Console.BackgroundColor = ConsoleColor.Green;
+                                            break;
+                                    }
+
+                                }
+                            
+                        }
+                    }
+                }
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
