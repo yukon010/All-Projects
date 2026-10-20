@@ -1,0 +1,7 @@
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\работ11.4\bin\Debug\работ11.4.exe.config
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\работ11.4\bin\Debug\работ11.4.exe
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\работ11.4\bin\Debug\работ11.4.pdb
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\работ11.4\obj\Debug\работ11.4.csproj.AssemblyReference.cache
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\работ11.4\obj\Debug\работ11.4.csproj.CoreCompileInputs.cache
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\работ11.4\obj\Debug\работ11.4.exe
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\работ11.4\obj\Debug\работ11.4.pdb
