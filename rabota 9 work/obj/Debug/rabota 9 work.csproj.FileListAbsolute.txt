@@ -1,0 +1,7 @@
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\rabota 9 work\bin\Debug\rabota 9 work.exe.config
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\rabota 9 work\bin\Debug\rabota 9 work.exe
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\rabota 9 work\bin\Debug\rabota 9 work.pdb
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\rabota 9 work\obj\Debug\rabota 9 work.csproj.AssemblyReference.cache
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\rabota 9 work\obj\Debug\rabota 9 work.csproj.CoreCompileInputs.cache
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\rabota 9 work\obj\Debug\rabota 9 work.exe
+D:\Users\1213-8\Documents\2-ИСПд\Дисциплина\Костюченков В.С\ОАиП\rabota 9 work\obj\Debug\rabota 9 work.pdb
